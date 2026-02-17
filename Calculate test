@@ -1,0 +1,56 @@
+# Gradle filesكود اختبار برنامج الآله الحاسبه (test_ calculate. Py)
+import unittest
+from calculator import add, subtract, multiply, divide
+
+class TestCalculator(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-2, 3), 1)
+
+    def test_subtract(self):
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(3, 5), -2)
+
+    def test_multiply(self):
+        self.assertEqual(multiply(2, 3), 6)
+        self.assertEqual(multiply(-2, 3), -6)
+
+    def test_divide(self):
+        self.assertEqual(divide(6, 3), 2)
+        self.assertEqual(divide(6, 0), "Error: Division by zero!")
+
+if __name__ == "__main__":
+    unittest.main()
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+*.apk
+output-metadata.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
